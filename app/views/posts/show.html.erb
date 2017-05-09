@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+<h2>Replies</h2>
+<%= render 'replyshow', reply: @reply %>
+
+<h2>Add a Reply:</h2>
+<%= render 'replynew', reply: @reply %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
